@@ -1,5 +1,12 @@
 \documentclass[]{article}
 \usepackage[a4paper, margin=3.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\hypersetup{
+	colorlinks=true,  
+	citecolor=blue,  
+}
 %
 
 %opening
@@ -8,6 +15,7 @@
 \date{}
 
 \begin{document}
+
 
 \maketitle
 
@@ -46,7 +54,6 @@ $$B = S((1-Z)/2) - S((1+Z)/2)$$
 To validate and analyze the cut circuits, simulations will be conducted using the toolkit provided by QiKit and PennyLane. These simulations aim to provide insights into the behavior and performance of the cut circuits on Noisy Intermediate-Scale Quantum (NISQ) hardware. The effects of Quantum Circuit Cutting will be evaluated based on various metrics, including circuit depth reduction, error mitigation, and overall performance improvement. I intend to follow a similar method as presented in Wei Tang's work\cite{CutQC}.
 
 This research plan is dedicated to extending the applicability of current algorithms through the exploration of Quantum Circuit Cutting Techniques, with a specific focus on their relevance in the context of Noisy Intermediate-Scale Quantum (NISQ) devices. The aim is to enhance the performance and adaptability of existing quantum algorithms, addressing challenges posed by noise and limitations in current quantum hardware. Additionally, I hope this work can serve me as a foundation, where I can gain the pertinent knowledge and the latest breakthroughs in this field, propelling me towards more sophisticated inquiries and contributions within the quantum computing domain.
-
 
 \bibliography{RP}
 \bibliographystyle{unsrt}
