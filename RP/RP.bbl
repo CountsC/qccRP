@@ -1,0 +1,142 @@
+\begin{thebibliography}{10}
+
+\bibitem{OA1}
+Edward Farhi, Jeffrey Goldstone, and Sam Gutmann.
+\newblock A quantum approximate optimization algorithm.
+\newblock {\em arXiv: Quantum Physics}, 2014.
+
+\bibitem{VQE1}
+Alberto Peruzzo, Jarrod McClean, Peter Shadbolt, Man-Hong Yung, Xiao-Qi Zhou,
+  Peter~J. Love, Alán Aspuru-Guzik, and Jeremy~L. O’Brien.
+\newblock A variational eigenvalue solver on a photonic quantum processor.
+\newblock {\em Nature Communications}, 5(1), July 2014.
+
+\bibitem{VQE2}
+Abhinav Kandala, Antonio Mezzacapo, Kristan Temme, Maika Takita, Markus Brink,
+  Jerry~M. Chow, and Jay~M. Gambetta.
+\newblock Hardware-efficient variational quantum eigensolver for small
+  molecules and quantum magnets.
+\newblock {\em Nature}, 549(7671):242–246, September 2017.
+
+\bibitem{In1}
+Alexander~M. Dalzell, Aram~W. Harrow, Dax~Enshan Koh, and Rolando~L. La~Placa.
+\newblock How many qubits are needed for quantum computational supremacy?
+\newblock {\em Quantum}, 4:264, May 2020.
+
+\bibitem{In2}
+Olivier Ezratty.
+\newblock Where are we heading with nisq?, 2023.
+
+\bibitem{QDCA}
+Thomas Ayral, Francois-Marie Le~Regent, Zain Saleem, Yuri Alexeev, and Martin
+  Suchara.
+\newblock Quantum divide and compute: Hardware demonstrations and noisy
+  simulations.
+\newblock In {\em 2020 IEEE Computer Society Annual Symposium on VLSI
+  (ISVLSI)}. IEEE, July 2020.
+
+\bibitem{fujii2022deep}
+Keisuke Fujii, Kaoru Mizuta, Hiroshi Ueda, Kosuke Mitarai, Wataru Mizukami, and
+  Yuya~O. Nakagawa.
+\newblock Deep variational quantum eigensolver: a divide-and-conquer method for
+  solving a larger problem with smaller size quantum computers, 2022.
+
+\bibitem{PhysRevX.6.021043}
+Sergey Bravyi, Graeme Smith, and John~A. Smolin.
+\newblock Trading classical and quantum computational resources.
+\newblock {\em Phys. Rev. X}, 6:021043, Jun 2016.
+
+\bibitem{Mitarai_2021}
+Kosuke Mitarai and Keisuke Fujii.
+\newblock Constructing a virtual two-qubit gate by sampling single-qubit
+  operations.
+\newblock {\em New Journal of Physics}, 23(2):023021, February 2021.
+
+\bibitem{CUPEC}
+2021 china undergraduate physics experiment competition awarded works
+  collection, https://2d.hep.com.cn/1262921/491, 2021.
+
+\bibitem{Qian_2023}
+Wenyang Qian, Robert A.~M. Basili, Mary~Mehrnoosh Eshaghian-Wilner, Ashfaq
+  Khokhar, Glenn Luecke, and James~P. Vary.
+\newblock Comparative study of variations in quantum approximate optimization
+  algorithms for the traveling salesman problem.
+\newblock {\em Entropy}, 25(8):1238, August 2023.
+
+\bibitem{vijendran2023expressive}
+V.~Vijendran, Aritra Das, Dax~Enshan Koh, Syed~M. Assad, and Ping~Koy Lam.
+\newblock An expressive ansatz for low-depth quantum optimisation, 2023.
+
+\bibitem{Li_2020}
+Li~Li, Minjie Fan, Marc Coram, Patrick Riley, and Stefan Leichenauer.
+\newblock Quantum optimization with a novel gibbs objective function and ansatz
+  architecture search.
+\newblock {\em Physical Review Research}, 2(2), April 2020.
+
+\bibitem{Egger_2021}
+Daniel~J. Egger, Jakub Mareček, and Stefan Woerner.
+\newblock Warm-starting quantum optimization.
+\newblock {\em Quantum}, 5:479, June 2021.
+
+\bibitem{beaulieu2022evaluating}
+Daniel Beaulieu and Anh Pham.
+\newblock Evaluating performance of hybrid quantum optimization algorithms for
+  maxcut clustering using ibm runtime environment, 2022.
+
+\bibitem{herrman2021multiangle}
+Rebekah Herrman, Phillip~C. Lotshaw, James Ostrowski, Travis~S. Humble, and
+  George Siopsis.
+\newblock Multi-angle quantum approximate optimization algorithm, 2021.
+
+\bibitem{Bartschi_2020}
+Andreas Bartschi and Stephan Eidenbenz.
+\newblock Grover mixers for qaoa: Shifting complexity from mixer design to
+  state preparation.
+\newblock In {\em 2020 IEEE International Conference on Quantum Computing and
+  Engineering (QCE)}. IEEE, October 2020.
+
+\bibitem{Wang_2021}
+Samson Wang, Enrico Fontana, M.~Cerezo, Kunal Sharma, Akira Sone, Lukasz
+  Cincio, and Patrick~J. Coles.
+\newblock Noise-induced barren plateaus in variational quantum algorithms.
+\newblock {\em Nature Communications}, 12(1), November 2021.
+
+\bibitem{CutQC}
+Wei Tang, Teague Tomesh, Martin Suchara, Jeffrey Larson, and Margaret
+  Martonosi.
+\newblock Cutqc: using small quantum computers for large quantum circuit
+  evaluations.
+\newblock In {\em Proceedings of the 26th ACM International Conference on
+  Architectural Support for Programming Languages and Operating Systems},
+  ASPLOS ’21. ACM, April 2021.
+
+\bibitem{PhysRevLett.130.110601}
+Chong Ying, Bin Cheng, Youwei Zhao, He-Liang Huang, Yu-Ning Zhang, Ming Gong,
+  Yulin Wu, Shiyu Wang, Futian Liang, Jin Lin, Yu~Xu, Hui Deng, Hao Rong,
+  Cheng-Zhi Peng, Man-Hong Yung, Xiaobo Zhu, and Jian-Wei Pan.
+\newblock Experimental simulation of larger quantum circuits with fewer
+  superconducting qubits.
+\newblock {\em Phys. Rev. Lett.}, 130:110601, Mar 2023.
+
+\bibitem{Ayral_2021}
+Thomas Ayral, François-Marie~Le Régent, Zain Saleem, Yuri Alexeev, and Martin
+  Suchara.
+\newblock Quantum divide and compute: Exploring the effect of different noise
+  sources.
+\newblock {\em SN Computer Science}, 2(3), March 2021.
+
+\bibitem{PRXQuantum.3.010346}
+Keisuke Fujii, Kaoru Mizuta, Hiroshi Ueda, Kosuke Mitarai, Wataru Mizukami, and
+  Yuya~O. Nakagawa.
+\newblock Deep variational quantum eigensolver: A divide-and-conquer method for
+  solving a larger problem with smaller size quantum computers.
+\newblock {\em PRX Quantum}, 3:010346, Mar 2022.
+
+\bibitem{Bechtold_2023}
+Marvin Bechtold, Johanna Barzen, Frank Leymann, Alexander Mandl, Julian Obst,
+  Felix Truger, and Benjamin Weder.
+\newblock Investigating the effect of circuit cutting in qaoa for the maxcut
+  problem on nisq devices.
+\newblock {\em Quantum Science and Technology}, 8(4):045022, September 2023.
+
+\end{thebibliography}

@@ -1,0 +1,55 @@
+\documentclass[]{article}
+\usepackage[a4paper, margin=3.5cm]{geometry}
+%
+
+%opening
+\title{Exploring Quantum Circuit Cutting Techniques for Application in NISQ Devices}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Quantum computing, promising a paradigm shift in computational capabilities, faces significant challenges on the path to practical implementation. While Noisy Intermediate-Scale Quantum (NISQ) devices, such as Quantum Approximate Optimization Algorithm (QAOA)\cite{OA1} and Variational Quantum Eigensolver (VQE)\cite{VQE1, VQE2}, show promise, persistent limitations in qubit count and elevated noise levels hinder the realization of true quantum advantage. Despite optimization efforts in algorithmic design, the current state of NISQ devices necessitates innovative strategies to unlock their full potential\cite{In1, In2}.
+
+One compelling approach to address these challenges is the division of large quantum problems into smaller, manageable parts that can be handled by smaller quantum devices. This strategy, whether at the algorithmic or circuit level, aims to harness the power of distributed quantum computation. Algorithmically, T. Tomesh et al. introduced the Quantum Divide and Conquer Algorithm (QDCA) for combinatorial optimization\cite{QDCA}, and frameworks like Fujii et al.'s deep variational quantum eigensolver show promise in simulating physical systems\cite{fujii2022deep}. At the circuit level, methods proposed by Bravyi et al. leverage classical postprocessing and the addition of virtual qubits for sparse circuits\cite{PhysRevX.6.021043}. Mitarai and Fujii proposed a method to add virtual two-qubit gates, enabling the simulation of remote two-qubit gates through quasiprobability decomposition of local single-qubit gates\cite{Mitarai_2021}. In this research proposal, I want to focus on the circuit level, specifically exploring how these techniques perform on actual problems.
+
+Throughout my university studies, I mastered elementary quantum mechanics along with other basic physics and math courses. In my second year, I participated in the China Undergraduate Physics Experiment Competition (CUPEC) and successfully secured a national second prize\cite{CUPEC}. The team I led also garnered two provincial-level prizes in subsequent competitions. Through these competition experiences, I gained hands-on expertise in utilizing Python, microcontrollers, and implementing basic control algorithms. I also had the opportunity to further enrich my understanding in the field of machine learning. Building upon these experiences and my current stage of learning, I propose the following research directions: 
+\begin{itemize}
+	\item Explore the applications of Quantum Circuit Cutting in actual algorithms (VQAs).
+	\item Evaluating the effects and efficiency of different circuit cutting methods on algorithms.
+	\item Finding a universal Quantum Circuit Cutting framework, aim to achieving quantum speed-up.
+\end{itemize}
+
+\section{Motivation}
+
+Despite significant advancements in Variational Quantum Algorithms (VQAs), including QAOA, the persisting issue of noise and the shortage of available count of qubit remains critical obstacle\cite{In1, In2}. Numerous strategies, such as the introduction of new ansazs for special problems\cite{Qian_2023,vijendran2023expressive,Li_2020}, warm-starting techniques\cite{Egger_2021, beaulieu2022evaluating}, and algorithmic modifications\cite{herrman2021multiangle, Bartschi_2020}, have been explored to enhance QAOA's performance on NISQ hardware. However, the detrimental impact of noise, especially in instances where hardware connectivity mismatches problem structures, continues to impede progress. Notably, the increasing noise hampers the scalability of solutions with a growing problem size. The emergence of noise-induced barren plateaus (NIBPs)\cite{In2,Wang_2021}, characterized by exponentially vanishing gradients, exacerbates the challenge.
+
+Quantum Circuit Cutting Techniques offer a potential solution to these challenges. By partitioning large quantum circuits into smaller, more manageable subcircuits requiring fewer qubits, this approach not only reduces the demand for physical qubits but also mitigates the adverse effects of noise. The resulting shallower circuits are more robust to noise\cite{QDCA, CutQC}, providing a promising tradeoff. While acknowledging the increased use of classical resources, this strategy opens up the opportunity to solve large problems using smaller quantum devices.
+
+Various works have practically demonstrated the effectiveness of circuit cutting in expanding the size of executable circuits beyond the physical capabilities of NISQ devices\cite{PhysRevX.6.021043,Mitarai_2021}. Experimental evidence indicates that circuit cutting can lead to better execution results in noisy simulations and on NISQ devices\cite{QDCA,CutQC,PhysRevLett.130.110601}, smaller circuits help mitigate gate errors and short decoherence times, although readout errors pose challenges to the circuit cutting procedure\cite{Ayral_2021}. However, the nuanced exploration of circuit cutting's application to NISQ devices, specifically within the context of a Variational Quantum Algorithm like QAOA, is a critical research gap. Recent works have started to evaluate the performance of circuit cutting in VQE\cite{PRXQuantum.3.010346} and QAOA\cite{Bechtold_2023}, but further experimental benchmarking on these schemes is necessary to assess their applicability in practice. Importantly, there is no general method for determining the optimal cutting points, leaving a significant aspect of circuit-cutting unexplored\cite{PhysRevLett.130.110601,Bechtold_2023}.
+
+In summary, Quantum Circuit Cutting Techniques, which involve partitioning large circuits into smaller subcircuits, present a promising solution to mitigate noise and enable the utilization of smaller quantum devices. However, the full potential of circuit cutting remains unexplored. In my research plan, I want to address this gap through experimental benchmarking, focusing on VQAs. The overarching objective is to develop a universal Quantum Circuit Cutting framework, with the ultimate aim of achieving quantum speed-up on NISQ devices.
+
+\section{Method}
+
+In this section, I will avoid intricate mathematical details, focus on giving a outline of the methodologies and approaches employed in this work.
+
+The circuit cutting process, akin to the classical divide-and-conquer method, comprises three key steps: (i) cutting the circuit into smaller subcircuits, (ii) executing these subcircuits, and (iii) classically recombining the subcircuit results. The circuit cutting process involves dividing the quantum circuit into a set of smaller subcircuits. For illustration, consider the MaxCut problem on the Quantum Approximate Optimization Algorithm (QAOA) circuit. In this case, the relevant multi-qubit gates are $R_{ZZ}$ gates. Building on Bechtold et al.'s work\cite{Bechtold_2023}, the cutting of a single $R_{ZZ}$ gate can be achieved using the Quantum Probability Distribution (QPD) introduced by Mitarai and Fujii\cite{Mitarai_2021}:
+$$S(Rzz(\gamma)) = \cos^2(\gamma/2) S(I \otimes I) + \sin^2(\gamma/2) S(Z \otimes Z) + \cos(\gamma/2) \sin(\gamma/2)(A \otimes B + B \otimes A)$$
+Where:
+$$A = S(Rz(-\pi/2)) - S(Rz(\pi/2))$$
+$$B = S((1-Z)/2) - S((1+Z)/2)$$
+To validate and analyze the cut circuits, simulations will be conducted using the toolkit provided by QiKit and PennyLane. These simulations aim to provide insights into the behavior and performance of the cut circuits on Noisy Intermediate-Scale Quantum (NISQ) hardware. The effects of Quantum Circuit Cutting will be evaluated based on various metrics, including circuit depth reduction, error mitigation, and overall performance improvement. I intend to follow a similar method as presented in Wei Tang's work\cite{CutQC}.
+
+This research plan is dedicated to extending the applicability of current algorithms through the exploration of Quantum Circuit Cutting Techniques, with a specific focus on their relevance in the context of Noisy Intermediate-Scale Quantum (NISQ) devices. The aim is to enhance the performance and adaptability of existing quantum algorithms, addressing challenges posed by noise and limitations in current quantum hardware. Additionally, I hope this work can serve me as a foundation, where I can gain the pertinent knowledge and the latest breakthroughs in this field, propelling me towards more sophisticated inquiries and contributions within the quantum computing domain.
+
+
+\bibliography{RP}
+\bibliographystyle{unsrt}
+
+
+\end{document}

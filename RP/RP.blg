@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: RP.aux
+Reallocating 'name_of_file' (item size: 1) to 3 items.
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Database file #1: RP.bib
+Warning--entry type for "CUPEC" isn't style-file defined
+--line 621 of file RP.bib
+You've used 23 entries,
+            1791 wiz_defined-function locations,
+            583 strings with 8575 characters,
+and the built_in function-call counts, 4978 in all, are:
+= -- 332
+> -- 386
+< -- 0
++ -- 137
+- -- 114
+* -- 404
+:= -- 868
+add.period$ -- 65
+call.type$ -- 23
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 187
+empty$ -- 455
+format.name$ -- 114
+if$ -- 1054
+int.to.chr$ -- 0
+int.to.str$ -- 23
+missing$ -- 17
+newline$ -- 111
+num.names$ -- 22
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 80
+stack$ -- 0
+substring$ -- 147
+swap$ -- 26
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 31
+width$ -- 25
+write$ -- 235
+(There was 1 warning)
